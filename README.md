@@ -11,13 +11,14 @@ The objective is to develop an API that processes HTML content to extract releva
 - Uses BERT for Named Entity Recognition (NER)
 - Extracts product names, prices, descriptions, and images
 - Built with FastAPI
-# 2. Install Dependencies
+## Install Dependencies
 
 pip install -r requirements.txt
-# Run the API Server
+## Run the API Server
 
 uvicorn main:app --reload
-4. Test the API
+
+## Test the API
 Use a tool like Postman or curl to test the API:
 
 curl -X POST "http://127.0.0.1:8000/extract" -H "Content-Type: application/json" -d "{\"html_content\": \"<html><head><title>Product Page</title></head><body><h1 class='product-name'>Sample Product</h1><span class='price'>$19.99</span><div class='description'>This is a sample product description.</div><img class='product-image' src='sample-product.jpg'/></body></html>\"}"
